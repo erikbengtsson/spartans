@@ -1,8 +1,176 @@
 // bower:scss
 // endbower
+@import 'reset';
 
+$portrait: 768px;
+
+$white: #fafafa;
+$black: #111;
+$main-color: #8A0000;
+
+$mobile-interface: 46px;
+
+*{
+	box-sizing: border-box;
+}
+html{
+	font-size: 62.5%;
+}
 body {
-    background: #fafafa;
+	position: relative;
+    background: $black;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+    color: $white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+}
+.site-header{
+	.logo{
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		height: 105px;
+		z-index: -1;
+		background: url("../images/header.jpg") no-repeat center;
+		background-size: cover;
+		box-shadow: inset 0px -14px 18px -8px rgba(0, 0, 0, 0.67);
+		.overlay{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0,0,0,0.5);
+		}
+		img{
+			margin: 15px;
+			margin-right: 5px;
+			max-width: 75px;
+			max-height: 75px;
+			width: auto;
+			height: auto;
+			position: relative;
+			z-index: 1;
+		}
+		h2{
+			margin: 0;
+			font-size: 2.4rem;
+			position: relative;
+			z-index: 1;
+		}
+	}
+	.scoreboard{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		padding: 8px;
+		background: $white;
+		color: $black;
+		z-index: 10;
+		.game-time{
+			width: 100%;
+		}
+		p{
+			font-size: 1.4rem;
+			margin: 0;
+		}
+		.divider{
+			position: relative;
+			top: 4px;
+			width: 2%;
+		}
+		article{
+			display: flex;
+			width: 49%;
+			align-items: center;
+			text-align: center;
+			margin-top: 8px;
+			h3{
+				font-size: 1.4rem;
+				font-weight: normal;
+			}
+			p.score{
+				width: 25%;
+				font-size: 2.2rem;
+			}
+			&.team-one{
+				flex-direction: row-reverse;
+			}
+		}
+		.read-more{
+			display: none;
+		}
+	}
+}
+nav.main-menu{
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	z-index: 10;
+	background: $main-color;
+	a{
+		color: $white;
+	}
+	.menu-button{
+		display: flex;
+		height: $mobile-interface;
+		width: $mobile-interface;
+		justify-content: center;
+		align-items: center;
+		font-size: 3rem;
+		transition: background-color 0.2s ease;
+		cursor: pointer;
+	}
+	>ul{
+		display: none;
+	}
+	&.active{
+		flex-wrap: wrap;
+		.menu-button{
+			background-color: darken($main-color, 10%);
+		}
+		>ul{
+			display: flex;
+			flex-direction: column;
+			order: 3;
+			width: 100%;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			li{
+				display: flex;
+				width: 100%;
+				height: $mobile-interface;
+				border-top: 1px solid lighten($main-color, 3%);
+				a{
+					display: flex;
+					width: 100%;
+					height: 100%;
+					align-items: center;
+					padding-left: 8px;
+				}
+				ul{
+					
+					li{
+
+					}
+				}
+			}
+		}
+	}
+}
+main{
+	.news{
+		article{
+			img{
+				width: 100%;
+			}
+		}
+	}
 }

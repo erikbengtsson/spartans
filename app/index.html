@@ -2,9 +2,9 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>spartans_fe</title>
+        <title>Jönköping Spartans</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
@@ -18,26 +18,91 @@
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="../bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
-
+        <!-- Font awesome -->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
         <!-- header -->
         <header class="site-header">
-            <section class="logo">
-                <img src="#" alt="Jönköping Spartans">
+            <section class="logo scroll" data-scroll-speed="4">
+                <div class="overlay"></div>
+                <img src="images/spartans_logo_gradient.png" alt="Jönköping Spartans">
                 <h2>Jönköping Spartans</h2>
             </section>
+            <section class="scoreboard">
+                <p class="game-time">Lördag 6/5 kl. 15:00</p>
+                <article class="team-one">
+                    <h3>Jönköping Spartans <span>U19</span></h3>
+                    <p class="score">21</p>
+                </article>
+                <span class="divider">@</span>
+                <article class="team-two">
+                    <h3>Kristianstad predators</h3>
+                    <p class="score">6</p>
+                </article>
+                <a href="#" class="read-more">Läs mer...</a>
+            </section>
+            <!-- menu -->
             <nav class="main-menu">
+                <div class="menu-button"><i class="fa fa-bars"></i></div>
                 <ul>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
+                    <li><a href="#">Föreningen</a>
+                        <!-- <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="#">Träningar</a></li>
+                    <li><a href="#">Matcher</a></li>
+                    <li><a href="#">Roster</a></li>
+                    <li><a href="#">Merchandise</a></li>
                 </ul>
+                <div class="select-wrapper">
+                    <select name="team-select" id="" class="team-select">
+                        <option value="">Alla</option>
+                        <option value="">U13</option>
+                        <option value="">U19</option>
+                        <option value="">Senior</option>
+                    </select>
+                </div>
             </nav>
+            <!-- /menu -->
         </header>
         <!-- /header -->
+        <main>
+            <section class="news">
+                <article>
+                    <img src="images/nyhet.jpg" alt="">
+                    <h2>Nyhetsrubrik</h2>
+                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laborum, dolores fugiat atque quia consequatur molestias.</p>
+                    <div class="meta"><span>4 April av Erhan Trshani i </span><span class="tags">U19</span></div>
+                </article>
+                <article>
+                    <img src="images/nyhet.jpg" alt="">
+                    <h2>Nyhetsrubrik</h2>
+                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laborum, dolores fugiat atque quia consequatur molestias.</p>
+                    <div class="meta"><span>4 April av Erhan Trshani i </span><span class="tags">U19</span></div>
+                </article>
+                <article>
+                    <img src="images/nyhet.jpg" alt="">
+                    <h2>Nyhetsrubrik</h2>
+                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laborum, dolores fugiat atque quia consequatur molestias.</p>
+                    <div class="meta"><span>4 April av Erhan Trshani i </span><span class="tags">U19</span></div>
+                </article>
+                <article>
+                    <h2>Nyhetsrubrik</h2>
+                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laborum, dolores fugiat atque quia consequatur molestias.</p>
+                    <div class="meta"><span>4 April av Erhan Trshani i </span><span class="tags">U19</span></div>
+                </article>
+                <article>
+                    <h2>Nyhetsrubrik</h2>
+                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laborum, dolores fugiat atque quia consequatur molestias.</p>
+                    <div class="meta"><span>4 April av Erhan Trshani i </span><span class="tags">U19</span></div>
+                </article>
+            </section>
+        </main>
 
 
         <!-- build:js scripts/vendor.js -->
